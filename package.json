@@ -1,0 +1,19 @@
+{
+  "name": "project8-ui",
+  "version": "1.0.0",
+  "description": "Project 8 UI",
+  "main": "main.js",
+  "author": "Project 8",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.5",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "require-dir": "^0.3.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.3"
+  }
+}
