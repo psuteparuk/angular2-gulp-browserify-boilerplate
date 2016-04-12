@@ -1,7 +1,0 @@
-var app = angular.module('project8', []);
-
-angular.module('project8').controller('MainController', function($scope) {
-  $scope.message = "CARMANA ROCKS!";
-});
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1vZHVsZS5qcyIsImNvbnRyb2xsZXJzL01haW5Db250cm9sbGVyLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUNEQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiJhcHBsaWNhdGlvbi5qcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBhcHAgPSBhbmd1bGFyLm1vZHVsZSgncHJvamVjdDgnLCBbXSk7XG4iLCJhbmd1bGFyLm1vZHVsZSgncHJvamVjdDgnKS5jb250cm9sbGVyKCdNYWluQ29udHJvbGxlcicsIGZ1bmN0aW9uKCRzY29wZSkge1xuICAkc2NvcGUubWVzc2FnZSA9IFwiQ0FSTUFOQSBST0NLUyFcIjtcbn0pO1xuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

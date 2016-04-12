@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
+var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var del = require('del');
 var path = require('path');
@@ -21,6 +22,7 @@ gulp.task('compile:css', ['clean:css'], function() {
   return gulp.src(path.join(sourceDir, sourceFile))
             .pipe(sourcemaps.init())
             .pipe(less())
+            .pipe(cleanCSS({ compatibility: 'ie8' }))
             .pipe(sourcemaps.write())
             .pipe(gulp.dest(styleDir))
             .on('error', function(err) {
