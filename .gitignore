@@ -26,3 +26,5 @@ node_modules
 # Assets
 public/css
 public/js/dist
+public/js/src
+public/index.html

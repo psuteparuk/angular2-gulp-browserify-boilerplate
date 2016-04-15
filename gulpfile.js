@@ -4,10 +4,10 @@ var gutil = require('gulp-util');
 
 requireDir('./gulp_tasks');
 
-gulp.task('default', ['watch:assets']);
+gulp.task('default', ['watch:app']);
 
-gulp.task('watch:assets', ['watch:css', 'watch:js'], function() {
-  gutil.log('Watch for changes to assets...');
+gulp.task('watch:app', ['watch:css', 'watch:js'], function() {
+  gutil.log('Watch for changes to app folder...');
 });
 
-gulp.task('build:assets', ['build:css', 'build:js']);
+gulp.task('build:app', ['build:css', 'build:js']);

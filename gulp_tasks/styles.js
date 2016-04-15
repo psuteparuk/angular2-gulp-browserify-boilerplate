@@ -4,6 +4,8 @@ var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var del = require('del');
 var path = require('path');
+var gulpif = require('gulp-if');
+var livereload = require('gulp-livereload');
 var utils = require('./utils');
 var gutil = require('gulp-util');
 
@@ -22,16 +24,18 @@ gulp.task('compile:css', ['clean:css'], function() {
   return gulp.src(path.join(sourceDir, sourceFile))
             .pipe(sourcemaps.init())
             .pipe(less())
-            .pipe(cleanCSS({ compatibility: 'ie8' }))
+            .pipe(gulpif(utils.production, cleanCSS({ compatibility: 'ie8' })))
             .pipe(sourcemaps.write())
             .pipe(gulp.dest(styleDir))
             .on('error', function(err) {
               console.error('Error running compile:css task! ', err.message);
               throw(err);
-            });
+            })
+            .pipe(gulpif(!utils.production, livereload()));
 });
 
 gulp.task('watch:css', ['compile:css'], function() {
+  if (!utils.production) livereload.listen();
   gulp.watch(path.join(sourceDir, '**/*.less'), { interval: utils.watchInterval }, ['compile:css']);
 });
 
