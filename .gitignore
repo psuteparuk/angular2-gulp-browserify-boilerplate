@@ -23,6 +23,9 @@
 # node
 node_modules
 
+# temp files
+app/javascript/application.tmp.js
+
 # Assets
 public/css
 public/js/dist

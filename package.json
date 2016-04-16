@@ -2,9 +2,15 @@
   "name": "project8-ui",
   "version": "1.0.0",
   "description": "Project 8 UI",
-  "main": "main.js",
+  "private": true,
+  "main": "index.js",
   "author": "Project 8",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:carmana/project8-ui.git"
+  },
   "devDependencies": {
+    "add-stream": "^1.0.0",
     "browserify": "^13.0.0",
     "browserify-ngannotate": "^2.0.0",
     "del": "^2.2.0",
@@ -21,6 +27,7 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.1",
     "require-dir": "^0.3.0",
+    "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
